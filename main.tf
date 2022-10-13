@@ -6,8 +6,6 @@ resource "aws_rds_cluster" "rdsaurora" {
   database_name           = "mydb"
   master_username         = "admin"
   master_password         = "admin12345678"
-  backup_retention_period = 5
-  preferred_backup_window = "07:00-09:00"
   engine_mode = "provisioned"
   #iops = 1000
   db_subnet_group_name = aws_db_subnet_group.dbsubnet.id
